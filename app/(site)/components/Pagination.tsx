@@ -1,22 +1,16 @@
 import React from "react";
+import { PaginationProps } from "@/app/types";
 
-interface PaginationProps {
-  currentPage: number;
-  totalPages: number;
-  onPreviousPage: () => void;
-  onNextPage: () => void;
-}
-
-const Pagination: React.FC<PaginationProps> = ({
+const Pagination = ({
   currentPage,
   totalPages,
-  onPreviousPage,
-  onNextPage,
-}) => {
+  handlePreviousPage,
+  handleNextPage,
+}: PaginationProps) => {
   return (
     <div className="pagination flex items-center justify-center mt-4">
       <button
-        onClick={onPreviousPage}
+        onClick={handlePreviousPage}
         disabled={currentPage === 1}
         className="mr-2"
       >
@@ -28,11 +22,11 @@ const Pagination: React.FC<PaginationProps> = ({
         {currentPage} / {totalPages}
       </span>
       <button
-        onClick={onNextPage}
+        onClick={handleNextPage}
         disabled={currentPage === totalPages}
         className="ml-2"
       >
-        <div className="w-10 h-10 rounded-full bg-amber-500 flex items-center justify-center">
+        <div className="w-10 h-10  rounded-full bg-amber-500 flex items-center justify-center">
           <span className="text-black font-bold text-lg">{">"}</span>
         </div>
       </button>

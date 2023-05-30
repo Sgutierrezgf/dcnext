@@ -1,20 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
+import { SearchFormProps } from "@/app/types";
 
-interface SearchBarProps {
-  onSearch: (query: string) => void;
-}
-
-const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
-  const [searchQuery, setSearchQuery] = useState("");
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    onSearch(searchQuery);
-  };
-
+const SearchForm = ({
+  searchQuery,
+  setSearchQuery,
+  handleSearch,
+}: SearchFormProps) => {
   return (
     <div className="flex justify-center mt-8">
-      <form onSubmit={handleSubmit} className="flex items-center">
+      <form onSubmit={handleSearch} className="flex items-center">
         <input
           type="text"
           placeholder="Buscar personaje..."
@@ -33,4 +27,4 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
   );
 };
 
-export default SearchBar;
+export default SearchForm;

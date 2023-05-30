@@ -11,6 +11,14 @@ module.exports = {
       },
     ];
   },
+  images: {
+    domains: [
+      "1000marcas.net",
+      "cdn.marvel.com",
+      "s3-alpha-sig.figma.com",
+      "i.annihil.us",
+    ],
+  },
   async middleware() {
     const proxyMiddleware = createProxyMiddleware({
       target: "https://superheroapi.com",
