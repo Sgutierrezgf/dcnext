@@ -5,5 +5,12 @@
 html,
 body,
 :root {
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
+    background-image: url('../styles/images/fondo.png');
+    background-size: cover;
+    background-position: center;
+    color: #F0E6D2;
 }
