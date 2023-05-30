@@ -1,9 +1,12 @@
 import React from "react";
 import Image from "next/image";
+import YoutubeVideo from "./YoutubeVideo";
 
 function InfoMarvel({ superheroes }: any) {
   const totalMovies = 20;
   const halfMovies = totalMovies / 2;
+  const videoId = "RoE5DCsCzf4";
+
   return (
     <div className="info mt-8 mx-4 flex place-content-center flex-wrap gap-4">
       <div className="w-full md:w-1/2 h-48 bg-slate-950/80  rounded-md border border-amber-950 p-4 grid align-center">
@@ -29,15 +32,7 @@ function InfoMarvel({ superheroes }: any) {
           </div>
         </div>
       </div>
-      <div className="w-full md:w-1/5 h-48 bg-slate-950/80 rounded-md border border-amber-950 p-4">
-        <iframe
-          className="w-full h-full rounded-md"
-          src="https://www.youtube.com/watch?v=RoE5DCsCzf4"
-          frameBorder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
-      </div>
+      <YoutubeVideo videoId={videoId} />
       <div className="w-full md:w-1/5 h-48 bg-slate-950/80 rounded-md border border-amber-950 p-4">
         <Image
           src="https://cdn.marvel.com/content/1x/themarvels_lob_crd_03.jpg"
