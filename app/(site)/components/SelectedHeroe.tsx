@@ -34,11 +34,19 @@ const selectedHeroe = ({ superhero }: any) => {
             Primeros cómics
           </h3>
           <div className="flex gap-4">
-            {superhero.comics.items.slice(0, 3).map((comic: any) => (
-              <div key={comic.id}>
-                <p className="font-semibold">{comic.name}</p>
+            {superhero.comics.items.length > 0 ? (
+              <div className="flex gap-4">
+                {superhero.comics.items.slice(0, 3).map((comic: any) => (
+                  <div key={comic.id}>
+                    <p className="text-center text-sm font-semibold text-gray-700 py-1.5">
+                      {comic.name}
+                    </p>
+                  </div>
+                ))}
               </div>
-            ))}
+            ) : (
+              <p>No hay cómics disponibles para este personaje</p>
+            )}
           </div>
         </div>
       </div>
