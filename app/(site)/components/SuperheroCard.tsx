@@ -37,11 +37,11 @@ const SuperheroCard = ({ superhero }: any) => {
               height={80}
             />
           </div>
-          <div>
+          <div className="rounded-full w-40 h-40 mx-auto hover:bg-sky-700/50 flex items-center">
             <Image
               src={`${superhero.thumbnail.path}.${superhero.thumbnail.extension}`}
               alt={superhero.name}
-              className="rounded-full w-32 h-32 mx-auto"
+              className="rounded-full w-36 h-36 mx-auto cursor-pointer"
               width={128}
               height={128}
               onClick={() => handleSelectPokemon(superhero)}

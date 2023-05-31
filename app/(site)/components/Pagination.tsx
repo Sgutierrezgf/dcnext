@@ -8,7 +8,7 @@ const Pagination = ({
   handleNextPage,
 }: PaginationProps) => {
   return (
-    <div className="pagination flex items-center justify-center mt-4">
+    <div className="pagination flex items-center justify-center mt-4 pb-4 mb-4">
       <button
         onClick={handlePreviousPage}
         disabled={currentPage === 1}
