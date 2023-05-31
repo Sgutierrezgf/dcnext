@@ -7,7 +7,6 @@ import dynamic from "next/dynamic";
 // import Pagination from "./components/Pagination";
 // import SuperheroList from "./components/SuperheroList";
 import useSuperheroes from "../api";
-import Loading from "./components/Loading";
 
 const Header = dynamic(() => import("./components/Header"));
 const InfoMarvel = dynamic(() => import("./components/InfoMarvel"));
@@ -27,10 +26,6 @@ export default function Home() {
     handleNextPage,
     currentSuperheroes,
   } = useSuperheroes();
-
-  if (superheroes.length === 0) {
-    return <Loading />;
-  }
 
   return (
     <div className="container">

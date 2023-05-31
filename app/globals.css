@@ -52,7 +52,7 @@ body,
 .loader::before {
     animation: loader 2s linear infinite;
     content: '';
-    border: 2px solid #000;
+    border: 2px solid blue;
     width: 200px;
     height: 200px;
     position: absolute;

@@ -11,7 +11,7 @@ const SearchForm = ({
       <form onSubmit={handleSearch} className="flex items-center">
         <input
           type="text"
-          placeholder="Buscar personaje..."
+          placeholder="Spider-man, Iron man, Thor, Black widow"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           className="rounded-l-lg px-4 py-2 border-t border-b border-l text-gray-800 border-gray-200 bg-white focus:outline-none"

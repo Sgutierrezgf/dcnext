@@ -17,6 +17,8 @@ module.exports = {
       "cdn.marvel.com",
       "s3-alpha-sig.figma.com",
       "i.annihil.us",
+      "www.google.com",
+      "i.pinimg.com",
     ],
   },
   async middleware() {
