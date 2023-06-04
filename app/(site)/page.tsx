@@ -35,7 +35,7 @@ export default function Home() {
         setSearchQuery={setSearchQuery}
         handleSearch={handleSearch}
       />
-      <InfoMarvel superheroes={superheroes} />
+      <InfoMarvel />
       <SuperheroList superheroes={currentSuperheroes} />
       <Pagination
         currentPage={currentPage}

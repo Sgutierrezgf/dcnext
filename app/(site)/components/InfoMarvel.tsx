@@ -18,7 +18,6 @@ function InfoMarvel() {
   const videoId = "RoE5DCsCzf4";
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [showLargeImage, setShowLargeImage] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
