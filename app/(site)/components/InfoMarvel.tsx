@@ -11,7 +11,7 @@ const images = [
   "https://cdn.marvel.com/content/1x/thorloveandthunder_lob_crd_03.jpg",
 ];
 
-function InfoMarvel({ superheroes }: any) {
+function InfoMarvel() {
   const totalMovies = 20;
   const halfMovies = (totalMovies / 2) * 5;
   const halfMovies2 = totalMovies / 2;
@@ -25,18 +25,10 @@ function InfoMarvel({ superheroes }: any) {
       setCurrentIndex((prevIndex) =>
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, 5000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);
-
-  const handleClick = () => {
-    setShowLargeImage(true);
-  };
-
-  const handleClose = () => {
-    setShowLargeImage(false);
-  };
 
   const [isSelectedHeroeVisible, setIsSelectedHeroeVisible] =
     React.useState<boolean>(false);
@@ -79,7 +71,7 @@ function InfoMarvel({ superheroes }: any) {
       <div className="w-full md:w-1/5 h-48 bg-slate-950/80 rounded-md border border-amber-950 p-4">
         <div
           className="w-full h-full cursor-pointer"
-          onClick={() => handleSelectPokemon()}
+          onClick={handleSelectPokemon}
         >
           <Image
             src={images[currentIndex]}
@@ -89,20 +81,18 @@ function InfoMarvel({ superheroes }: any) {
             height={100}
           />
         </div>
-        {showLargeImage && (
-          <Modal
-            isOpen={isSelectedHeroeVisible}
-            onClose={() => setIsSelectedHeroeVisible(false)}
-          >
-            <Image
-              src={images[currentIndex]}
-              alt="Imagen de Marvel"
-              className="max-w-full max-h-full object-scale-down"
-              width={800}
-              height={800}
-            />
-          </Modal>
-        )}
+        <Modal
+          isOpen={isSelectedHeroeVisible}
+          onClose={() => setIsSelectedHeroeVisible(false)}
+        >
+          <Image
+            src={images[currentIndex]}
+            alt="Imagen de Marvel"
+            className="max-w-full max-h-full object-scale-down"
+            width={800}
+            height={800}
+          />
+        </Modal>
       </div>
     </div>
   );
