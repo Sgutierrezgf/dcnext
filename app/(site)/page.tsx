@@ -30,12 +30,12 @@ export default function Home() {
   return (
     <div className="container">
       <Header />
-      <InfoMarvel superheroes={superheroes} />
       <SearchForm
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
         handleSearch={handleSearch}
       />
+      <InfoMarvel superheroes={superheroes} />
       <SuperheroList superheroes={currentSuperheroes} />
       <Pagination
         currentPage={currentPage}

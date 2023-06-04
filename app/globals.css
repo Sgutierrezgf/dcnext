@@ -63,3 +63,34 @@ body,
     opacity: 0;
     animation-delay: 1s;
 }
+
+
+
+.progress-bar-container {
+    position: relative;
+    perspective: 500px;
+}
+
+
+.progress-bar {
+
+    display: flex;
+    height: 32px;
+    background-color: #ccc;
+    border: 5px solid #1E2328;
+    transform-style: preserve-3d;
+}
+
+.progress-segment {
+    flex-grow: 1;
+    height: 100%;
+    border-right: 1px solid #000;
+}
+
+.progress-segment:last-child {
+    border-right: none;
+}
+
+.progress-segment.filled {
+    background-color: rgba(13, 153, 255, 1)
+}

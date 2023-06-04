@@ -8,13 +8,13 @@ const SearchForm = ({
 }: SearchFormProps) => {
   return (
     <div className="flex justify-center mt-8">
-      <form onSubmit={handleSearch} className="flex items-center">
+      <form onSubmit={handleSearch} className="flex items-center w-1/2">
         <input
           type="text"
           placeholder="Spider-man, Iron man, Thor, Black widow"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="rounded-l-lg px-4 py-2 border-t border-b border-l text-gray-800 border-gray-200 bg-white focus:outline-none"
+          className="rounded-l-lg px-4 py-2 border-t border-b border-l text-gray-800 border-gray-200 bg-white focus:outline-none w-full"
         />
         <button
           type="submit"

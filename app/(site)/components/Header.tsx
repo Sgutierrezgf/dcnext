@@ -14,22 +14,20 @@ function Header() {
           width={100}
           height={100}
         />
-        <div className="">
-          <button className="ml-2 hover:text-amber-500  ml-5">HOME</button>
+        <div className="hidden sm:block">
+          <button className="ml-2 hover:text-amber-500 ml-5">HOME</button>
         </div>
-        <div className="">
-          <button className="ml-2 hover:text-amber-500  ml-5">
-            PERSONAJES
-          </button>
+        <div className="hidden sm:block">
+          <button className="ml-2 hover:text-amber-500 ml-5">PERSONAJES</button>
         </div>
       </div>
       <div className="icons flex">
-        <div className="mr-2">
-          <button className="hover:text-amber-500  mr-5">
+        <div className="hidden sm:block">
+          <button className="hover:text-amber-500 mr-5">
             <AiOutlineBell className="w-8 h-8" />
           </button>
         </div>
-        <div>
+        <div className="hidden sm:block">
           <button className="hover:text-amber-500 mr-5">
             <AiOutlineSetting className="w-8 h-8" />
           </button>
